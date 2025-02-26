@@ -1,0 +1,15 @@
+pandas
+streamlit
+numpy
+pydeck
+joblib
+requests
+pickle-mixin
+scikit-learn
+matplotlib
+plotly
+seaborn
+folium
+streamlit-folium
+shap
+lightgbm
