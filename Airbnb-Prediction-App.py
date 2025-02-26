@@ -29,7 +29,7 @@ st.set_page_config(page_title='Airbnb Prediction App', page_icon='🏨')
 # Load dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("listing_bert.csv")
+    return pd.read_csv("./data/listing_bert.csv")
 
 airbnb_data = load_data()
 
@@ -357,11 +357,11 @@ with tab1:
 
          # Dictionary mapping locations to their respective models
         model_files = {
-        "Central Region": "Central_listings_model.pkl",
-        "East Region": "East_listings_model.pkl",
-        "North Region": "north_listings_model.pkl",
-        "North-East Region": "north_east_listings_model.pkl",
-        "West Region": "west_listings_model.pkl"
+        "Central Region": "./model/Central_listings_model.pkl",
+        "East Region": "./model/East_listings_model.pkl",
+        "North Region": "./model/north_listings_model.pkl",
+        "North-East Region": "./model/north_east_listings_model.pkl",
+        "West Region": "./model/west_listings_model.pkl"
         }
         st.markdown(
             f"""
@@ -518,19 +518,19 @@ with tab1:
         
             # Load the appropriate dataset based on user selection
             if pred_location == 'Central Region':
-                x_training = pd.read_csv("X_central_train.csv")
+                x_training = pd.read_csv("./data/X_central_train.csv")
 
             elif pred_location == 'West Region':
-                x_training = pd.read_csv("X_west_train.csv")
+                x_training = pd.read_csv("./data/X_west_train.csv")
 
             elif pred_location == 'North-East Region':
-                x_training = pd.read_csv("X_north_east_train.csv")
+                x_training = pd.read_csv("./data/X_north_east_train.csv")
 
             elif pred_location == 'North Region':
-                x_training = pd.read_csv("X_north_train.csv")
+                x_training = pd.read_csv("./data/X_north_train.csv")
 
             elif pred_location == 'East Region':
-                x_training = pd.read_csv("X_east_train.csv")
+                x_training = pd.read_csv("./data/X_east_train.csv")
 
             # # Apply Standard Scaling
             scaled_features = scaler.fit(x_training)
