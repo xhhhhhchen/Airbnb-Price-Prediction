@@ -381,10 +381,10 @@ with tab1:
         )
 
      #neighbourhood group
-        pred_location = st.pills("1.Select Location", list(model_files.keys()), key="pred_location")
+        pred_location = st.pills("Select Location", list(model_files.keys()), key="pred_location")
 
      #room type
-        pred_room_type = st.pills("2.Room Type", ["Entire home/apt", "Private room", "Shared room"], key="pred_room_type")
+        pred_room_type = st.pills("Room Type", ["Entire home/apt", "Private room", "Shared room"], key="pred_room_type")
         
      #neighbourhood
         # st.dataframe(airbnb_data)       
